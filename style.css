@@ -1,0 +1,58 @@
+@property --rotate{
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+*{
+    margin: 0;
+}
+.content{
+    background-image: -moz-linear-gradient(
+        var(--rotate),
+        #5ddcff, #3c67e3 43%, #4e00c2c2    
+    );
+    width: 100vw;
+    height: 100vh;
+    animation: spin 2.5s linear infinite;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+}
+
+@keyframes spin {
+    0%{
+    --rotate:0deg;
+    }
+    100%{
+    --rotate: 360deg;
+    }
+}
+
+p{
+    font-size: 2.5rem;
+    padding: 15%;
+    font-weight: 900;
+    text-shadow: 5px 0 5px #002542;
+    text-transform: uppercase;
+}
+
+button{
+    font-size: 2rem;
+    padding: 0.3em 0.4em;
+    border: 0px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 5px 3px #003;
+}
+
+#btnYes{
+    transform: translate(-100%, 0);
+}
+
+#btnNo{
+    position: absolute;
+}
+
+body{
+    background-color: #5dffc9;
+}
